@@ -1,0 +1,66 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 3px 3px 1px black;
+  
+}
+
+#logo {
+  position: absolute;
+}
+
+#company_name {
+  margin-left: 100px;
+}
+
+#company_slogan {
+  margin-left: 110px;
+}
+
+#accordion {
+  width: 78%px;
+  text-align: left;
+  color: black;
+}
+
+.card-header {
+  background-color: #3578FF;
+  color: aliceblue;
+}
+
+.card-link {
+  color: aliceblue;
+}
+
+.containerPadding{
+  padding: 20px;
+}
+
+body {
+  color: black;
+}
+
+.theadColor {
+  background-color: #3578FF;
+}
+
+#h3Color {
+  color: #3578FF;
+}
+
+#pColor {
+  color: black;
+}
+
+.showInput {
+  background-color: #0099ff;
+}
+
+.error {
+  background-color: #fc4747;
+}

@@ -1,0 +1,312 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Module 5 - Labo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+    
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="./styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border text-white theadColor">
+        <img id="logo" height="100px" width="100px" src="https://lh3.googleusercontent.com/proxy/5i6gJcCIPNGABns2MLdhf8I159dtTZ7SMtaTNXVqm5ahb2Zf6GxtaR6JQgLhcAaN7KdL24gLn3nzx-_NbwxhjM4OsnzMfsjWq6ADZc8jb6TMIm7AvxR1bgVeKJJS4SuRRTg_NSKdNvHdqbFUMPHrETwKfp-61MPfG_B5EPs_z3nJ8iU">
+        <h1 id="company_name">Welcome to Bike Fixer</h1>
+        <p id="company_slogan">We'll fix your bike so you don't have to!</p>
+        <p id="company_slogan">123 Sunstream Blvd. Toronto, Ontario</p>
+    </div>
+
+    <div class="container-md p-3 my-3 bg-dark">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#services"><img src="images/services.png" alt="logo" style="width:50px; padding: 5px;">Service</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#appointment"><img src="images/appointment.png" alt="logo" style="width:50px; padding: 5px;">Book Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#payment"><img src="images/payment.png" alt="logo" style="width:50px; padding: 5px;">Payment</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#moreInfo"><img src="images/mechanics.png" alt="logo" style="width:50px; padding: 5px;">Professionals</a>
+                    </li>   
+                    <li class="nav-item">
+                        <a class="nav-link p-3" href="#aboutUs"><img src="images/aboutUs.png" alt="logo" style="width:50px; padding: 5px;">About Us</a>
+                    </li> 
+                </ul>
+            </div>  
+        </nav>
+    </div>
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3 border bg-light text-success containerPadding" id="aboutUs">
+        <h3 id="h3Color">Let us tell you about our expertise</h3>
+        <p id="pColor">Here at Bike Fixer, we will make sure to fix your bike with our utmost attention to detail and fixing quality. 
+            We are so good at fixing bikes, we guarantee that the quality of the bike will be in better shape than when you first bought it. 
+            This company was founded back in 1999 and it has grown to become one of the largest chains of bike repair services in the enitre world.
+            We will make sure to fix up your bike and ship it back within 3-5 business days.    
+        </p>
+    </div>
+
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>COVID-19: </strong>Due to the recent unfortunate pandemic situation, some of our services might be limited to local residents only.
+            Our shop hours have been reduced to weekends only and our External Repair service is being put on hold until futher notice.
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container containerPadding" id="services">
+        <h2>What we will do for you</h2>
+        <p>Here is a list of services we can offer</p>            
+        <table class="table table-light table-striped table-hover">
+            <thead class="theadColor">
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Brake Repair</td>
+                <td>If you managed to break your brake, send your bike to us and we will repair it in 2-4 business days.</td>
+                <td>$14.99</td>
+            </tr>
+            <tr>
+                <td>Tune-up</td>
+                <td>For regular check-ups and tune-ups, we can ensure your bike is in great shape for a morning ride.</td>
+                <td>$9.99</td>
+            </tr>
+            <tr>
+                <td>External Repair</td>
+                <td>For more serious and extensive damage, we take your bike to an off-site location to ensure safety.</td>
+                <td>$49.99</td>
+            </tr>
+            <tr>
+                <td>Tire Repair</td>
+                <td>If you get the good old nail in your tire, bring it in to us for a quick and safe nail-removal.</td>
+                <td>$5.99</td>
+            </tr>
+            <tr>
+                <td>Lube Service</td>
+                <td>If your bike isn't going the speeds it used to, maybe its time for a little lubricant.</td>
+                <td>$1.99</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <center>
+        <div class="container containerPadding" id="appointment">
+            <h2 style="text-align: left;">Book an appointment</h2>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    </div>
+                    <div id="collapseService" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Please select from the list of services provided below:</p>
+                        </div>
+                        <div class="container">
+                            <!-- The following piece of code was inspired from https://getbootstrap.com/docs/4.0/components/forms/ -->
+                            <div class="card" style="display: inline-block;">
+                                <img src="https://www.mayacycle.com/wp-content/uploads/2012/09/Bike-brakes.jpg" width="200px" height="200px" class="rounded float-left">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="brakeRepair" name="radios">
+                                        <label class="form-check-label" for="brakeRepair">Brake Repair</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="display: inline-block;">
+                                <img src="https://www.algonquincollege.com/parking/files/2014/08/fixit.jpg" width="200px" height="200px" class="rounded float-left">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="tuneUp" name="radios">
+                                        <label class="form-check-label" for="tuneUp">Tune-up</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="display: inline-block;">
+                                <img src="https://m.media-amazon.com/images/S/aplus-media/sc/c3562c3b-267d-4229-806a-1a7183b3cbbd.__CR0,0,970,600_PT0_SX970_V1___.jpg" width="200px" height="200px" class="rounded float-left">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="externalRepair" name="radios">
+                                        <label class="form-check-label" for="externalRepair">External Repair</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="display: inline-block;">
+                                <img src="https://i5.walmartimages.com/asr/523c1b28-ffae-438c-a79a-247aa90c04b6_1.88b68dc3218a422d06de7d0460192690.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff" width="200px" height="200px" class="rounded float-left">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="tireRepair" name="radios">
+                                        <label class="form-check-label" for="tireRepair">Tire Repair</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" style="display: inline-block;">
+                                <img src="https://canadiantire.scene7.com/is/image/CanadianTire/0730088_1?defaultImage=image_na_EN&imageSet=CanadianTire/0730088_1?defaultImage=image_na_EN&id=Rg1r-1&fmt=jpg&fit=constrain,1&wid=193&hei=341" width="200px" height="200px" class="rounded float-left">
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="lube" name="radios">
+                                        <label class="form-check-label" for="lube">Lube Service</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseMechanic">Choose a mechanic</a>
+                    </div>
+                    <div id="collapseMechanic" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>For more information about the mechanics, please click the "Meet our mechanics" button below.</p>
+                            <div class="form-group row">
+                                <label for="mechanics" class="col-2 col-form-label" >Choose a mechanic:</label>
+                                <div class="col-10">
+                                    <select name="mechanics" id="mechanics" class="form-control" >
+                                        <option value="Lionel">Lionel</option>
+                                        <option value="Ronald">Ronald</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    </div>
+                    <div id="collapseDate" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>What date?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="form-group row">
+                                <label for="dateTimeInput" class="col-2 col-form-label">Date</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" value="06/22/2020" id="dateTimeInput">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="payment">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your contact information</a>
+                    </div>
+                    <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>How can we contact you?</p>
+                            <form>
+                                <!-- The following piece of code was inspired from https://getbootstrap.com/docs/4.0/components/forms/ -->
+                                <!-- NAME -->
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                </div>
+                                <!-- EMAIL -->
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <!-- PHONE -->
+                                <div class="form-group">
+                                    <label for="phoneNumber">Phone number</label>
+                                    <input type="text" class="form-control" id="phoneNumber" aria-describedby="phoneHelp" placeholder="Enter phone number">
+                                    <small id="phoneHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+                                </div>
+                                <!-- CREDIT CARD -->
+                                <div class="form-group">
+                                    <label for="creditCard">Credit Card</label>
+                                    <input type="text" id="creditCard" class="form-control" placeholder="Enter credit card number" title="We ask for your credit card number in case of no-show, 20$ will be charged.">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+    <!-- You'll certainly need buttons at some point in your site -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
+    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
+    <!-- This idea is already part of the components in Bootstrap -->
+    <div class="container pl-4">
+        <button type="button" id="bookAppointment" class="btn btn-success">Book appointment</button>
+    </div>
+
+    <!-- A different approach would be to make the whole staff information collapsible -->
+    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
+    <!-- Here a single card is used, but card columns could be used -->
+    <div class="container containerPadding" id="moreInfo">
+        <h2>More information</h2>
+        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
+        <div id="mechanics" class="collapse">
+            <div class="card bg-warning" style="width:300px; display: inline-block;">
+                <img class="card-img-top" height="400px" width="200px" src="https://vignette.wikia.nocookie.net/characterprofile/images/7/75/Mario.png/revision/latest?cb=20160103112702" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Lionel</h4>
+                    <p class="card-text">Lionel knows all about bikes. He has owned a bike for 96% of his life. He lives and breathes bikes. If there is anyone who is a master at fixing bikes, its Leo.</p>
+                </div>
+            </div>
+            <div class="card bg-primary" style="width:300px; display: inline-block;">
+                <img class="card-img-top" height="400px" width="200px" src="https://img.pngio.com/luigi-shipping-wiki-fandom-powered-by-wikia-luigi-face-png-1200_2068.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Ronald</h4>
+                    <p class="card-text">If you thought Leo was good at fixing bikes, then you haven't met Ronald. Ronald has previous experience fixing motorbikes and planes. So yeah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/service.js"></script>
+</body>
+</html>
